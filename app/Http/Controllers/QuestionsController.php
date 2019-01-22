@@ -54,7 +54,8 @@ class QuestionsController extends Controller
      */
     public function show(Question $question)
     {
-        //
+        $question->increment('views');
+        return view('questions.show')->with('question',$question);
     }
 
     /**
@@ -78,7 +79,7 @@ class QuestionsController extends Controller
     public function update(AskQuestionRequest $request, Question $question)
     {
         $question->update($request->only('title','body'));
-        return redirect()->route('questions.index')->with('success','Your question has been updated');
+        return redirect('/questions')->with('success','Your question has been updated');
     }
 
     /**
