@@ -39,7 +39,7 @@ class Question extends Model
     }
 
     public function answers(){
-        return $this->hasMany(Answer::clas);
+        return $this->hasMany(Answer::class);
         //$question->answers()->count();
         //foreach ( $question->answers as $answer) NOT GONNA WORK.... SOLUTION:
     }
