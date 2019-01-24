@@ -37,4 +37,9 @@ class Answer extends Model
             $answer->question->decrement('answers_count');
         });
     }
+
+    public function votes()
+    {
+        return $this->morphToMany(User::class,'votable');
+    }
 }

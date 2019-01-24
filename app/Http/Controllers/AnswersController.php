@@ -32,12 +32,6 @@ class AnswersController extends Controller
 
         return redirect()->route('questions.show',$question->slug)->with('success','Your answer has been updated');
     }
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Answer  $answer
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Question $question, Answer $answer)
     {
         $this->authorize('delete',$answer);
