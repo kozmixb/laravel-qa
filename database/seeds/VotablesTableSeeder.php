@@ -32,7 +32,7 @@ class VotablesTableSeeder extends Seeder
             for($i=0;$i<rand(1,$numberOfUsers);$i++)
             {
                 $user = $users[$i];
-                $user->voteQuestion($answer,$votes[rand(0,1)]);
+                $user->voteAnswer($answer,$votes[rand(0,1)]);
             }
         }
     }

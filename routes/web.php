@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return redirect('/questions');
-});
+Route::get('/', 'QuestionsController@index');
 
 Auth::routes();
 
