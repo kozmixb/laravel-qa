@@ -22,7 +22,7 @@ export default {
     },
     data(){
         return{
-            user: this.model.user,
+            user: this.model.user
         }
     }
 }
