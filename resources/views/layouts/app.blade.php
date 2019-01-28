@@ -10,7 +10,6 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -74,5 +73,12 @@
             @yield('content')
         </main>
     </div>
+    <script>
+        window.Auth = {!! json_encode([
+            'signedIn' => Auth::check(),
+            'user' => Auth::user()
+        ])!!}
+    </script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
