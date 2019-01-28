@@ -9,6 +9,9 @@ require('./bootstrap');
 require('./fontawesome');
 
 window.Vue = require('vue');
+import 'izitoast/dist/css/iziToast.min.css';
+import VueIziToast from 'vue-izitoast';
+Vue.use(VueIziToast);
 
 /**
  * The following block of code may be used to automatically register your
