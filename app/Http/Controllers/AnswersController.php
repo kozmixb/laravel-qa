@@ -45,7 +45,7 @@ class AnswersController extends Controller
         if($request->expectsJson()){
             return response()->json([
                 'message' => 'Your answer has been updated',
-                'answer_html'=> $answer->body_html,
+                'body_html'=> $answer->body_html,
             ]);    
         }
         return redirect()->route('questions.show',$question->slug)->with('success','Your answer has been updated');
